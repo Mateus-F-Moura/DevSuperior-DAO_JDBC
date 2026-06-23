@@ -16,11 +16,16 @@ public class Main {
         Seller seller = sellerDao.findById(3);
         System.out.println(seller);
 
+        System.out.println();
         System.out.println("=== TEST 2: Seller findByDepartment ===");
         Department department = new Department(2, null);
         List<Seller> list = sellerDao.findByDepartment(department);
-
         list.forEach(System.out::println);
 
-    }
+        System.out.println();
+        System.out.println("=== TEST 3: Seller findAll ===");
+        List<Seller> listAll = sellerDao.findAll();
+        listAll.forEach(System.out::println);
+
+        }
 }
