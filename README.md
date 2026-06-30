@@ -1,29 +1,29 @@
 # DevSuperior DAO JDBC
 
-Projeto de estudo desenvolvido em Java com o objetivo de praticar acesso a banco de dados utilizando JDBC e o padrão DAO.
+Study project developed in Java to practice database access using JDBC and the DAO pattern.
 
-## Sobre o projeto
+## About the project
 
-Este projeto simula um sistema simples de cadastro de vendedores e departamentos.
+This project simulates a simple system for managing sellers and departments.
 
-A aplicação realiza operações básicas de CRUD no banco de dados, separando as responsabilidades entre:
+The application performs basic CRUD operations in the database, separating responsibilities between:
 
-- Entidades
-- Classes DAO
-- Implementações JDBC
-- Classe de conexão com o banco
-- Classe principal da aplicação
+- Entities
+- DAO classes
+- JDBC implementations
+- Database connection class
+- Main application class
 
-O projeto foi desenvolvido com finalidade educacional, durante os estudos de Java e banco de dados.
+This project was developed for educational purposes while studying Java and databases.
 
-## Tecnologias utilizadas
+## Technologies used
 
 - Java
 - JDBC
 - Maven
 - MySQL
 
-## Estrutura do projeto
+## Project structure
 
 ```text
 DevSuperior-DAO_JDBC
@@ -53,70 +53,70 @@ DevSuperior-DAO_JDBC
 └── README.md
 ```
 
-## Funcionalidades
+## Features
 
-O projeto possui operações CRUD para vendedores e departamentos.
+The project includes CRUD operations for sellers and departments.
 
-### Vendedores
+### Sellers
 
-- Buscar vendedor por ID
-- Buscar vendedores por departamento
-- Listar todos os vendedores
-- Inserir vendedor
-- Atualizar vendedor
-- Remover vendedor
+- Find seller by ID
+- Find sellers by department
+- List all sellers
+- Insert seller
+- Update seller
+- Delete seller
 
-### Departamentos
+### Departments
 
-- Buscar departamento por ID
-- Listar todos os departamentos
-- Inserir departamento
-- Atualizar departamento
-- Remover departamento
+- Find department by ID
+- List all departments
+- Insert department
+- Update department
+- Delete department
 
-## Conceitos praticados
+## Concepts practiced
 
-- Programação orientada a objetos
+- Object-oriented programming
 - JDBC
-- Padrão DAO
-- Padrão Factory
+- DAO pattern
+- Factory pattern
 - Interfaces
-- Implementação de interfaces
-- CRUD com banco de dados
+- Interface implementations
+- CRUD operations with a database
 - PreparedStatement
 - ResultSet
-- Tratamento de exceções
-- Organização do projeto em camadas
-- Relacionamento entre tabelas
+- Exception handling
+- Layered project organization
+- Relationship between database tables
 
-## Configuração do banco de dados
+## Database configuration
 
-O projeto utiliza um arquivo chamado `db.properties` dentro da pasta:
+The project uses a file named `db.properties` inside the following folder:
 
 ```text
 src/main/resources
 ```
 
-Exemplo de configuração:
+Configuration example:
 
 ```properties
-user=seu_usuario
-password=sua_senha
+user=your_user
+password=your_password
 dburl=jdbc:mysql://localhost:3306/coursejdbc?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
 ```
 
-Altere o usuário, senha e nome do banco de acordo com a configuração do seu ambiente.
+Change the user, password, and database name according to your local environment.
 
-## Modelo do banco de dados
+## Database model
 
-O projeto utiliza duas tabelas principais:
+The project uses two main tables:
 
 - `department`
 - `seller`
 
-A tabela `seller` possui uma chave estrangeira para `department`.
+The `seller` table has a foreign key referencing `department`.
 
-Exemplo de criação das tabelas:
+Example table creation script:
 
 ```sql
 CREATE DATABASE coursejdbc;
@@ -141,7 +141,7 @@ CREATE TABLE seller (
 );
 ```
 
-Exemplo de dados iniciais:
+Example initial data:
 
 ```sql
 INSERT INTO department (Name) VALUES
@@ -159,40 +159,40 @@ INSERT INTO seller (Name, Email, BirthDate, BaseSalary, DepartmentId) VALUES
 ('Jose Blue', 'jose@gmail.com', '1997-03-04', 3000.0, 2);
 ```
 
-## Como executar o projeto
+## How to run the project
 
-Clone o repositório:
+Clone the repository:
 
 ```bash
-git clone https://github.com/seu-usuario/DevSuperior-DAO_JDBC.git
+git clone https://github.com/your-username/DevSuperior-DAO_JDBC.git
 ```
 
-Acesse a pasta do projeto:
+Enter the project folder:
 
 ```bash
 cd DevSuperior-DAO_JDBC
 ```
 
-Configure o arquivo `db.properties` com os dados do seu banco.
+Configure the `db.properties` file with your database information.
 
-Depois, execute a classe principal do projeto pela sua IDE.
+Then run the main class using your IDE.
 
-Também é possível compilar o projeto com Maven:
+You can also compile the project with Maven:
 
 ```bash
 mvn compile
 ```
 
-## Observação
+## Notes
 
-Este projeto foi desenvolvido apenas para fins de estudo.
+This project was developed for study purposes only.
 
-Algumas operações executadas na classe principal alteram os dados do banco, como inserção, atualização e remoção. Por isso, é recomendado utilizar um banco de dados de teste.
+Some operations executed in the main class change database records, such as insert, update, and delete operations. For this reason, it is recommended to use a test database.
 
-## Autor
+## Author
 
-Projeto desenvolvido durante os estudos de Java, JDBC e banco de dados.
+Project developed while studying Java, JDBC, and databases.
 
-## Licença
+## License
 
-Este projeto é de uso educacional.
+This project is for educational use.
